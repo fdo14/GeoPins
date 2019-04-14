@@ -15,7 +15,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     introspection: true,
-    playgroundd: true,
+    playground: true,
     context: async ({ req }) => {
         let authToken = null
         let currentUser = null
