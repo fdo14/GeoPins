@@ -33,7 +33,7 @@ const Login = ({ classes }) => {
   return (
     <div className={classes.root}>
     <Typography component="h1" variant="h3" gutterBottom noWrap style={{ color: "rgb(66, 133, 244)"}}>Welcome</Typography>
-      <GoogleLogin clientId="322026797733-c0rbs5d10d7nnglgl5s2soc6kvkoffa5.apps.googleusercontent.com" onSuccess={onSuccess} isSignedIn={true} onFailure={onFailure} theme="dark" buttonText="Login with Google"/>
+      <GoogleLogin clientId="322026797733-gs5ever8alm2l44mbuq6hb10iu36o0uj.apps.googleusercontent.com" onSuccess={onSuccess} isSignedIn={true} onFailure={onFailure} theme="dark" buttonText="Login with Google"/>
     </div>
   )
 };

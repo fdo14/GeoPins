@@ -6,6 +6,10 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const { findOrCreateUser } = require('./controllers/userController')
 
+var cors = require('cors')
+
+
+
 mongoose.connect(process.env.MONGO_URI, { 
     useNewUrlParser: true
 }).then(() => console.log("DB connected!"))
@@ -28,6 +32,8 @@ const server = new ApolloServer({
         return { currentUser }
     }
 })
+
+server.use(cors()) 
 
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log(`Listening on ${url}`)
